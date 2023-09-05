@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:registerpage/main.dart';
 import 'package:registerpage/ui/login.dart';
@@ -46,10 +45,10 @@ class _Log_inState extends State<Log_in> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
-                        Text(
+                        const Text(
                           "SIGN UP",
                           style: TextStyle(
                             color: Colors.black,
@@ -57,7 +56,7 @@ class _Log_inState extends State<Log_in> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         // Container(
@@ -68,16 +67,16 @@ class _Log_inState extends State<Log_in> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(height: 19),
+                              const SizedBox(height: 19),
                               Container(
-                                padding: EdgeInsets.only(left: 25, right: 25),
+                                padding: const EdgeInsets.only(left: 25, right: 25),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.white24,
                                 ),
                                 child: TextFormField(
                                   controller: nameController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       contentPadding: EdgeInsets.all(5),
                                       hintText: " Name",
@@ -99,12 +98,12 @@ class _Log_inState extends State<Log_in> {
                                   },
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Container(
-                                padding: EdgeInsets.only(left: 25, right: 25),
+                                padding: const EdgeInsets.only(left: 25, right: 25),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.white24,
@@ -112,7 +111,7 @@ class _Log_inState extends State<Log_in> {
                                 child: TextFormField(
                                   controller: usernumber_controller,
                                   keyboardType: TextInputType.phone,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       contentPadding: EdgeInsets.all(5),
                                       hintText: "Phone number",
@@ -143,11 +142,11 @@ class _Log_inState extends State<Log_in> {
                                   },
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Container(
-                                padding: EdgeInsets.only(left: 25, right: 25),
+                                padding: const EdgeInsets.only(left: 25, right: 25),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.white24,
@@ -155,7 +154,7 @@ class _Log_inState extends State<Log_in> {
                                 child: TextFormField(
                                   controller: emailController,
                                   keyboardType: TextInputType.emailAddress,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       contentPadding: EdgeInsets.all(5),
                                       hintText: "Email",
@@ -170,7 +169,7 @@ class _Log_inState extends State<Log_in> {
                                     }
                                     if (!RegExp(
                                         r"^[a-z]+[0-9]+(?!.*(?:\+{2,}|\-{2,}|\.{2, }))(?:[\.+\-]{0,1}[a-z0-9])*@gmail.com$")
-                                        .hasMatch(valuemail!)) {
+                                        .hasMatch(valuemail)) {
                                       return 'Invalid email';
                                     }
                                     return null;
@@ -180,11 +179,11 @@ class _Log_inState extends State<Log_in> {
                                   },
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Container(
-                                padding: EdgeInsets.only(left: 25, right: 25),
+                                padding: const EdgeInsets.only(left: 25, right: 25),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: Colors.white24,
@@ -199,15 +198,15 @@ class _Log_inState extends State<Log_in> {
                                           onTap: () {
                                             show();
                                           },
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.visibility,
                                             color: Colors.black,
                                           )),
-                                      hintStyle: TextStyle(color: Colors.black),
+                                      hintStyle: const TextStyle(color: Colors.black),
                                       border: InputBorder.none,
-                                      contentPadding: EdgeInsets.all(10),
+                                      contentPadding: const EdgeInsets.all(10),
                                       hintText: "Password",
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.lock_outline,
                                         color: Colors.black,
                                       )),
@@ -234,9 +233,9 @@ class _Log_inState extends State<Log_in> {
                                   },
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Container(
-                                padding: EdgeInsets.only(left: 25, right: 25),
+                                padding: const EdgeInsets.only(left: 25, right: 25),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: Colors.white24,
@@ -254,9 +253,9 @@ class _Log_inState extends State<Log_in> {
                                             Icons.visibility,
                                             color: Colors.black,
                                           )),
-                                      hintStyle: TextStyle(color: Colors.black),
+                                      hintStyle: const TextStyle(color: Colors.black),
                                       border: InputBorder.none,
-                                      contentPadding: EdgeInsets.all(10),
+                                      contentPadding: const EdgeInsets.all(10),
                                       hintText: "Confirm password",
                                       icon: const Icon(
                                         Icons.lock_outline,
@@ -271,8 +270,8 @@ class _Log_inState extends State<Log_in> {
                                   },
                                 ),
                               ),
-                              SizedBox(),
-                              Container(
+                              const SizedBox(),
+                              SizedBox(
                                 height: 50,
                                 width: 150,
                                 child: ElevatedButton(
@@ -292,23 +291,23 @@ class _Log_inState extends State<Log_in> {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) => MyHomePage(title: "")));
+                                                builder: (context) => const MyHomePage(title: "")));
                                       }
                                     },
-                                    child: Text("Register")),
+                                    child: const Text("Register")),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 15,
                               ),
                               Container(
-                                padding: EdgeInsets.only(right: 20),
+                                padding: const EdgeInsets.only(right: 20),
                                 alignment: Alignment.bottomRight,
                                 child: InkWell(
                                   onTap: () {
                                     Navigator.push(context,
-                                        MaterialPageRoute(builder: (_) => Log()));
+                                        MaterialPageRoute(builder: (_) => const Log()));
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     "Already have a account, LOG IN ",
                                     style: TextStyle(
                                       color: Colors.black,

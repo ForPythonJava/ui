@@ -305,7 +305,7 @@ class _LogState extends State<Log> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            MyHomePage(title: "")),
+                                            const MyHomePage(title: "")),
                                   );
                                 },
                                 child: Text(
@@ -356,7 +356,8 @@ class _LogState extends State<Log> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        MyHomePage(title: "")));
+                                                        const MyHomePage(
+                                                            title: "")));
                                             print('register');
                                           }
                                         }
@@ -373,7 +374,7 @@ class _LogState extends State<Log> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              MyHomePage(title: "")));
+                                              const MyHomePage(title: "")));
                                 }
                               }
                             }
@@ -481,19 +482,19 @@ class _LogState extends State<Log> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return MyHomePage(title: "");
+                              return const MyHomePage(title: "");
                             },
                           ),
                         );
                       },
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.all(5),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.only(left: 10),
+                              padding: EdgeInsets.only(left: 10),
                               child: Text(
                                 'Sign in with Google',
                                 style: TextStyle(
@@ -506,7 +507,7 @@ class _LogState extends State<Log> {
                         ),
                       ),
                     )),
-                Padding(padding: EdgeInsets.all(40))
+                const Padding(padding: EdgeInsets.all(40))
               ],
             ),
           ),
